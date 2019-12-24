@@ -6,11 +6,11 @@
 | **Predicting** |We will build a model to predict the bandwidth and max user for media company devided in three 3 zones (MPG-Miles Per Gallon)|
 | **Data**       |Data Set including train and test with time-series format measured from 01/10/2017 to 09/03/2019 <br/> Data link : https://github.com/ntphuc/AI-Bandwidth-Prediction/blob/master/server-flow-prediction.zip|
 | **Features**   | <ol> <li>update-time: the date is measured. Ex: 01-10-2017.</li> <li>zone-code: zone is measured. In this project, we have three zones.</li> <li>hour-id: the hour time in a day</li> <li>bandwidth: the bandwidth size is measured in a day</li> <li>max-user: the max-user size is measured in a day</li> <li>count-date: the date index in data-set. Ex: 01/10/2017, count-date starts from 0.</li> <li>day-of-week: the day index in week. Ex: monday is 0</li> 
-Features currently available: UPDATE_TIME, HOUR_ID, ZONE_CODE.
+<li>Features currently available: UPDATE_TIME, HOUR_ID, ZONE_CODE.</li> 
 
-Regarding ZONE_CODE, statistics show that there are only 3 types: zone01, zone02, zone03. They are completely separate and have no relationship with each other so we continue to divide it into 3 parts and build 3 separate models for each zone.
+<li>Regarding ZONE_CODE, statistics show that there are only 3 types: zone01, zone02, zone03. They are completely separate and have no relationship with each other so we continue to divide it into 3 parts and build 3 separate models for each zone.</li> 
 
-With the remaining 2 features about UPDATE_TIME and HOUR_ID time. To better understand the milestones flow in the data, we create a few new features from the existing features:
+<li>With the remaining 2 features about UPDATE_TIME and HOUR_ID time. To better understand the milestones flow in the data, we create a few new features from the existing features:</li> 
 
 <li>count_date: Get the first day (October 1, 2017) of the train set as a zero milestone, until the last day in the train set (March 9, 2019) will be 524. </li>
 
